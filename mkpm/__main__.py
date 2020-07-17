@@ -56,14 +56,18 @@ def main() -> None:
                 color="red",
                 attrs=["bold"],
             )
+            continue
 
-        if os.path.exists(module_path):
-            for file_name in args.add:
-                file_path = os.path.join(module_path, f"{file_name}.py")
-                open(file_path, "w").close()
-                cprint(f"\tFile {file_path} was created", color="white")
+        except Exception as unimplemented_error:
+            cprint(f"Error: unimplemented error {unimplemented_error}", color="red", attrs=["bold"])
+            continue
 
-            cprint(f"Module {module_path} was created", color="white", attrs=["bold"])
+        for file_name in args.add:
+            file_path = os.path.join(module_path, f"{file_name}.py")
+            open(file_path, "w").close()
+            cprint(f"\tCreated {file_path}", color="white")
+
+        cprint(f"Module {module_path} was created", color="white", attrs=["bold"])
 
 
 main()
