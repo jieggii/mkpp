@@ -1,5 +1,6 @@
 # mkpm
 A simple tool for creating Python modules. For lazies.
+![preview](https://imgur.com/vGgTAkS.jpg)
 
 ## Installation
 mkpm can be easily installed via pip:

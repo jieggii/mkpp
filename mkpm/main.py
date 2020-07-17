@@ -69,5 +69,3 @@ def main() -> None:
 
         cprint(f"Module {module_path} was created", color="white", attrs=["bold"])
 
-
-main()

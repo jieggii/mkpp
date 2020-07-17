@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mkpm"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple tool for creating Python modules. For lazies."
 authors = ["jieggii"]
 license = "MIT"
@@ -26,6 +26,9 @@ colorama = "^0.4.3"
 isort = "^5.1.1"
 black = "^19.10b0"
 flake8 = "^3.8.3"
+
+[tool.poetry.scripts]
+mkpm = 'mkpm.main:main'
 
 [build-system]
 requires = ["poetry>=0.12"]
