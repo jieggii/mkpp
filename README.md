@@ -9,7 +9,7 @@ mkpm can be easily installed via pip:
 `mkpm [--help] [--version] [--ignore-pep8] [--executable] modules [modules ...] [--add [file-names [file-names ...]]]`
 
 ## Examples
-`mkpm --executable my_module1 ~/Projects/Python/my_module2 some-dir/my_module3 --add config`
-`mkpm app`
-`mkpm --executable program1`
-`mkpm app --add config utils`
+* `mkpm --executable my_module1 ~/Projects/Python/my_module2 some-dir/my_module3 --add config`
+* `mkpm app`
+* `mkpm --executable program1`
+* `mkpm app --add config utils`
