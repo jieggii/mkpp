@@ -59,7 +59,11 @@ def main() -> None:
             continue
 
         except Exception as unimplemented_error:
-            cprint(f"Error: unimplemented error {unimplemented_error}", color="red", attrs=["bold"])
+            cprint(
+                f"Unimplemented Error: {unimplemented_error}",
+                color="red",
+                attrs=["bold"],
+            )
             continue
 
         for file_name in args.add:
@@ -68,4 +72,3 @@ def main() -> None:
             cprint(f"\tCreated {file_path}", color="white")
 
         cprint(f"Module {module_path} was created", color="white", attrs=["bold"])
-

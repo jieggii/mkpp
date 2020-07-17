@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mkpm"
-version = "0.1.1"
+version = "0.1.2"
 description = "A simple tool for creating Python modules. For lazies."
 authors = ["jieggii"]
 license = "MIT"
