@@ -1,4 +1,4 @@
-# mkpm
+# mkpp
 A simple tool for creating Python packages. For lazies.
 ![preview](https://imgur.com/vGgTAkS.jpg)
 
