@@ -1,6 +1,6 @@
 import argparse
 
-from mkpm import __version__
+from mkpp import __version__
 
 
 def parse_args() -> argparse.Namespace:
