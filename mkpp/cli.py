@@ -5,8 +5,8 @@ from mkpm import __version__
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        prog="mkpm",
-        description="A simple tool for creating Python modules. For lazies.",
+        prog="mkpp",
+        description="A simple tool for creating Python packages. For lazies.",
     )
     parser.add_argument(
         "-V",

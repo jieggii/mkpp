@@ -4,7 +4,7 @@ import re
 import colorama
 from termcolor import cprint
 
-from mkpm import cli
+from mkpp import cli
 
 MODULE_NAME_REGEX = r"^[a-z0-9\_]+$"  # https://pep8.org/#package-and-module-names
 
