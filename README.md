@@ -10,7 +10,7 @@ mkpp can be easily installed via pip:
 `mkpp [--help] [--version] [--ignore-pep8] [--executable] modules [modules ...] [--add [FILE [FILE ...]]]`
 
 ## Examples
-* `mkpp --executable my_module1 ~/Projects/Python/my_module2 some-dir/my_module3 --add config`
+* `mkpp --executable my_package1 ~/Projects/Python/my_package2 some-dir/my_package3 --add config`
 * `mkpp app`
 * `mkpp --executable program1`
 * `mkpp app --add config utils`
