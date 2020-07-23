@@ -6,25 +6,25 @@ from termcolor import cprint
 
 from mkpp import cli
 
-MODULE_NAME_REGEX = r"^[a-z0-9\_]+$"  # https://pep8.org/#package-and-module-names
+PACKAGE_NAME_REGEX = r"^[a-z0-9\_]+$"  # https://pep8.org/#package-and-module-names
 
 
 def main() -> None:
     colorama.init()
     args = cli.parse_args()
 
-    for i, module_path in enumerate(args.modules):
-        module_name = os.path.basename(
-            module_path
-        )  # path.basename returns None if there is a `/` in the end of the module_path, so we also need to implement
+    for i, package_path in enumerate(args.packages):
+        package_name = os.path.basename(
+            package_path
+        )  # path.basename returns None if there is a `/` in the end of the package_path, so we also need to implement
         # this case:
-        if not module_name:
-            module_name = os.path.basename(module_path[0:-1])
+        if not package_name:
+            package_name = os.path.basename(package_path[0:-1])
 
         if not args.ignore_pep8:
-            if not re.fullmatch(MODULE_NAME_REGEX, module_name):
+            if not re.fullmatch(PACKAGE_NAME_REGEX, package_name):
                 cprint(
-                    f'Error: name "{module_name}" does not match PEP8 standards ('
+                    f'Error: name "{package_name}" does not match PEP8 standards ('
                     f"https://pep8.org/#package-and-module-names). "
                     f"Use --ignore-pep8 flag to skip this check",
                     color="red",
@@ -32,8 +32,8 @@ def main() -> None:
                 )
                 continue
 
-        if os.path.exists(module_path):
-            cprint(f"Error: {module_path} already exists", color="red", attrs=["bold"])
+        if os.path.exists(package_path):
+            cprint(f"Error: {package_path} already exists", color="red", attrs=["bold"])
             continue
 
         if args.add:
@@ -48,11 +48,11 @@ def main() -> None:
         args.add = list(set(args.add))
 
         try:
-            os.mkdir(module_path)
+            os.mkdir(package_path)
 
         except PermissionError:
             cprint(
-                f"Error: could not create {module_path}. Permission denied",
+                f"Error: could not create {package_path}. Permission denied",
                 color="red",
                 attrs=["bold"],
             )
@@ -67,8 +67,8 @@ def main() -> None:
             continue
 
         for file_name in args.add:
-            file_path = os.path.join(module_path, f"{file_name}.py")
+            file_path = os.path.join(package_path, f"{file_name}.py")
             open(file_path, "w").close()
             cprint(f"\tCreated {file_path}", color="white")
 
-        cprint(f"Module {module_path} was created", color="white", attrs=["bold"])
+        cprint(f"Package {package_path} was created", color="white", attrs=["bold"])
