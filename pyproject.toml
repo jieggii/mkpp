@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mkpp"
-version = "0.1.6"
+version = "0.1.7"
 description = "A simple tool for creating Python packages. For lazies."
 authors = ["jieggii"]
 license = "MIT"
