@@ -23,7 +23,9 @@ def main():
         if args.no_pep8 is False:
             if not re.fullmatch(_PACKAGE_NAME_REGEX, name):
                 cli.log.error(
-                    f"{name} ({path}): package name does not match PEP8 naming standards (https://pep8.org/#package-and-module-names). Use '--no-pep8' flag to disable this check",
+                    f"{name} ({path}): package name does not match PEP8 naming standards "
+                    "(https://pep8.org/#package-and-module-names). "
+                    "Use '--no-pep8' flag to disable this check",
                     fatal=True,
                 )
 
@@ -34,7 +36,7 @@ def main():
                 file_path.touch(exist_ok=True)
             if args.verbose:
                 cli.log.info(
-                    f"{name} ({path}): was succesfully created (children: {', '.join(include)})"
+                    f"{name} ({path}): was successfully created (children: {', '.join(include)})"
                 )
 
         except FileExistsError:
