@@ -1,6 +1,6 @@
 [project]
 name = "mkpp"
-version = "1.0.0"
+version = "1.0.3"
 description = "Simple tool for creating Python packages. For lazies."
 authors = [
     {name = "jieggii", email = "jieggii.contact@gmail.com"},
@@ -8,9 +8,15 @@ authors = [
 dependencies = []
 requires-python = ">=3.6"
 license = {text = "MIT"}
+readme = "README.md"
+repository = "https://github.com/jieggii/mkpp"
+keywords = [
+    "packages"
+]
 
 [project.urls]
-homepage = "https://github.com/jieggii/mkpp"
+"Homepage" = "https://github.com/jieggii/mkpp"
+"Bug tracker" = "https://github.com/jieggii/mkpp/issues"
 
 [project.scripts]
 mkpp = 'mkpp.__main__:main'
