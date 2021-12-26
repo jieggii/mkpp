@@ -1,16 +1,15 @@
 # mkpp
-A simple tool for creating Python packages. For lazies.
-![preview](https://imgur.com/kwoKr6A.jpg)
+Simple tool for creating Python packages. For lazies.
+[![asciicast](https://asciinema.org/a/XDgcUhOMcB2WQZnmnc0HLD70u.svg)](https://asciinema.org/a/XDgcUhOMcB2WQZnmnc0HLD70u)
 
 ## Installation
-mkpp can be easily installed via pip:
+**mkpp** can be easily installed via **pip** or any other package manager you use:
 `pip install mkpp`
 
 ## Usage
-`mkpp [--help] [--version] [--ignore-pep8] [--executable] packages [packages ...] [--add [FILE [FILE ...]]]`
+`mkpp [--help] [--verbose] [--version] [--parents] [--no-pep8] [--include [FILES]] [--executable] packages [PACKAGES]`
 
 ## Examples
-* `mkpp --executable my_package1 ~/Projects/Python/my_package2 some-dir/my_package3 --add config`
-* `mkpp app`
-* `mkpp --executable program1`
-* `mkpp app --add config utils`
+* `mkpp --executable mypackage1 ~/code/projects/mypackage2 some-dir/mypackage3 --include config`
+* `mkpp app --executable`
+* `mkpp --executable prog --include utils cli`

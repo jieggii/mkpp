@@ -1,6 +1,6 @@
 fmt:
-	poetry run isort ./mkpp/
-	poetry run black ./mkpp/
+	pdm run isort mkpp/
+	pdm run black mkpp/
 
 lint:
-	poetry run flake8 ./mkpp/
+	pdm run flake8 mkpp/
