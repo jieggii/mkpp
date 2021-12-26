@@ -3,7 +3,8 @@ Simple tool for creating Python packages. For lazies.
 [![asciicast](https://asciinema.org/a/XDgcUhOMcB2WQZnmnc0HLD70u.svg)](https://asciinema.org/a/XDgcUhOMcB2WQZnmnc0HLD70u)
 
 ## Installation
-**mkpp** can be easily installed via **pip** or any other package manager you use:
+**mkpp** can be easily installed via **pip**:
+
 `pip install mkpp`
 
 ## Usage
